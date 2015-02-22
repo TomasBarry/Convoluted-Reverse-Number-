@@ -145,10 +145,10 @@ public class ReverseNumber {
 	public static void main(String[] args) throws Exception {
 		System.out.println("Don't do this");
 		long correctReverse, resultingReverse;
-		for (long i = 1; i < Integer.MAX_VALUE; i++) {
+		for (long i = 0; i < Integer.MAX_VALUE/100; i++) {
 			// Long.parseLong is to account for leading 0s
 			correctReverse = Long.parseLong(new StringBuilder("" + i).reverse().toString());
-			resultingReverse = Long.parseLong(String.valueOf(ReverseNumber.reverse(i)));
+			resultingReverse = ReverseNumber.reverse(i);
 			// test that numbers are correct
 			if(correctReverse != resultingReverse) {
 				throw new Exception();
